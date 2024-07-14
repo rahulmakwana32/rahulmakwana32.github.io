@@ -1,1 +1,153 @@
-This is my portfolio
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Makwana - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        .nav-tabs button {
+            background-color: #ddd;
+            border: none;
+            padding: 1rem;
+            margin: 0 0.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .nav-tabs button.active {
+            background-color: #333;
+            color: #fff;
+        }
+        .content {
+            padding: 1rem;
+        }
+        .resume, .projects {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Rahul Makwana - Portfolio</h1>
+</div>
+
+<div class="nav-tabs">
+    <button class="tab-link active" onclick="openTab('resume')">Resume</button>
+    <button class="tab-link" onclick="openTab('projects')">Projects</button>
+</div>
+
+<div class="content">
+    <div id="resume" class="resume">
+        <h2>Resume</h2>
+        <p><strong>Rahul Makwana</strong></p>
+        <p>469-734-8932 | rahulmakwana32@gmail.com | Santa Clara, CA 95050</p>
+
+        <h3>Summary</h3>
+        <p>With over 14 years of experience in designing and managing cloud-based and on-premises applications for Apple Inc. Leading cross-functional teams and managing complex technical projects. I am equipped to embrace leadership roles, drive innovation and translate business processes to effective and agile project execution. Proven ability to resolve critical technical issues and drive strategic roadmap alignment, with a track record of delivery results. I am seeking opportunities to collaborate with talented teams and contribute to the success of a fast-growing company.</p>
+
+        <h3>Professional Experience</h3>
+        <p><strong>Technical Project Manager, Infosys Limited</strong> <em>Feb 2020-Current, Sunnyvale, California</em></p>
+        <ul>
+            <li>Spearheaded the design and management of a comprehensive HRIS system for Apple Inc., integrating in-house applications with external vendor solutions, with a project value of over $5 million, impacting 150k+ employees.</li>
+            <li>Implemented robust encryption protocols to safeguard sensitive employee data, ensuring compliance with industry standards and best practices (e.g., AES, PGP, GDPR).</li>
+            <li>Skilled in designing and implementing seamless integrations with various third-party applications and systems, including Workday, ADP, Kronos, Work jam and ServiceNow using RESTful APIs and gRPC.</li>
+            <li>Made crucial decisions on system architecture, data governance, and user experience, ensuring seamless integration and optimal performance.</li>
+            <li>Led the migration in-house applications to AWS cloud infrastructure, resulting in a 30% increase in system efficiency and 25% reduction in operational costs.</li>
+            <li>Led weekly status meetings with stakeholders to review progress and address issues.</li>
+            <li>Led cross-functional teams of engineers, developers, and QA professionals to achieve project goals.</li>
+            <li>Implemented robust technical solutions to ensure fault tolerance, resilience, and scalability.</li>
+            <li>Mitigated technical risks, preventing significant financial losses by designing a robust messaging architecture with Circuit Breaker patterns and reliable message queues, ensuring system stability.</li>
+            <li>Optimized Applications performance in a high-traffic environment through Nginx load balancing and scaling strategies, achieving 99.99% uptime.</li>
+            <li>Led a project to optimize HRIS applications performance by implementing caching strategies and database indexing, resulting in a 30% improvement in platform responsiveness during peak usage hours.</li>
+            <li>Managing a group of IT experts to deliver round-the-clock technical assistance and addressing urgent/critical matters daily, ensuring timely resolution within SLA.</li>
+            <li>Ensured measurable KPIs were developed, communicated, and monitored.</li>
+            <li>Resolved technical issues for Apple, resulting in a 35% decrease in customer-reported incidents.</li>
+            <li>Introduced advanced reporting capabilities by leveraging Performance Analytics and Splunk.</li>
+        </ul>
+
+        <!-- Add more professional experience as needed -->
+
+        <h3>Skills</h3>
+        <ul>
+            <li>Software Development Lifecycle</li>
+            <li>Java, Reactjs, SQL, Shell Scripting, CSS, HTML</li>
+            <li>Functional/Reactive Programming</li>
+            <li>AWS-EC2/EKS/VPC/ELB/VPC</li>
+            <li>Mongo, Oracle SQL/PL-SQL</li>
+            <li>Spring Framework</li>
+            <li>REST, gRPC</li>
+            <li>Elastic and Solr Search</li>
+            <li>Kubernetes</li>
+            <li>Apache Kafka, Active MQ</li>
+            <li>Scripting, Debugging, and Monitoring</li>
+            <li>Microservices Architecture</li>
+            <li>Redis</li>
+            <li>DR Planning and Implementation</li>
+            <li>Network Debugging</li>
+            <li>Cross-functional team leadership</li>
+            <li>Decision-making</li>
+            <li>Stakeholder Engagement</li>
+            <li>Analytical Thinking</li>
+            <li>Mentorship and Coaching</li>
+            <li>System Design and Design patterns</li>
+            <li>Agile project management</li>
+            <li>Risk Mitigation</li>
+            <li>Sprint Planning</li>
+            <li>Cross-functional Team Coordination</li>
+            <li>Linux/Unix</li>
+        </ul>
+
+        <h3>Education and Training</h3>
+        <p><strong>Bachelors</strong></p>
+        <p>Electronics, Nagpur University, Chandrapur, May 2010</p>
+    </div>
+
+    <div id="projects" class="projects">
+        <h2>Projects</h2>
+        <p>Project details will go here.</p>
+    </div>
+</div>
+
+<script>
+    function openTab(tabName) {
+        var i, tabContent, tabLinks;
+        tabContent = document.getElementsByClassName("resume");
+        for (i = 0; i < tabContent.length; i++) {
+            tabContent[i].style.display = "none";
+        }
+        tabContent = document.getElementsByClassName("projects");
+        for (i = 0; i < tabContent.length; i++) {
+            tabContent[i].style.display = "none";
+        }
+        tabLinks = document.getElementsByClassName("tab-link");
+        for (i = 0; i < tabLinks.length; i++) {
+            tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.className += " active";
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".tab-link").click();
+    });
+</script>
+
+</body>
+</html>

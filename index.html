@@ -4,41 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahul Makwana - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
         .header {
             background-color: #333;
             color: #fff;
-            padding: 1rem;
+            padding: 2rem 0;
             text-align: center;
+        }
+        .header h1 {
+            margin: 0;
         }
         .nav-tabs {
             display: flex;
             justify-content: center;
-            margin: 1rem 0;
+            background-color: #444;
         }
         .nav-tabs button {
-            background-color: #ddd;
+            background-color: #444;
             border: none;
-            padding: 1rem;
-            margin: 0 0.5rem;
+            padding: 1rem 2rem;
+            margin: 0;
             cursor: pointer;
-            font-size: 1rem;
-        }
-        .nav-tabs button.active {
-            background-color: #333;
+            font-size: 1.2rem;
             color: #fff;
+            transition: background-color 0.3s ease;
+        }
+        .nav-tabs button:hover, .nav-tabs button.active {
+            background-color: #333;
         }
         .content {
-            padding: 1rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
         .resume, .projects {
             display: none;
+        }
+        .resume ul, .resume p {
+            margin: 0 0 1rem 0;
+        }
+        .resume ul {
+            padding-left: 1.5rem;
+        }
+        .resume li {
+            margin-bottom: 0.5rem;
+        }
+        .resume .section-title {
+            font-weight: bold;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
@@ -57,13 +86,13 @@
     <div id="resume" class="resume">
         <h2>Resume</h2>
         <p><strong>Rahul Makwana</strong></p>
-        <p>469-734-8932 | rahulmakwana32@gmail.com | Santa Clara, CA 95050</p>
+        <p>469-734-8932 | <a href="mailto:rahulmakwana32@gmail.com">rahulmakwana32@gmail.com</a> | Santa Clara, CA 95050</p>
 
-        <h3>Summary</h3>
+        <p class="section-title">Summary</p>
         <p>With over 14 years of experience in designing and managing cloud-based and on-premises applications for Apple Inc. Leading cross-functional teams and managing complex technical projects. I am equipped to embrace leadership roles, drive innovation and translate business processes to effective and agile project execution. Proven ability to resolve critical technical issues and drive strategic roadmap alignment, with a track record of delivery results. I am seeking opportunities to collaborate with talented teams and contribute to the success of a fast-growing company.</p>
 
-        <h3>Professional Experience</h3>
-        <p><strong>Technical Project Manager, Infosys Limited</strong> <em>Feb 2020-Current, Sunnyvale, California</em></p>
+        <p class="section-title">Professional Experience</p>
+        <p><strong>Technical Project Manager, Infosys Limited</strong> <em>(Feb 2020-Current, Sunnyvale, California)</em></p>
         <ul>
             <li>Spearheaded the design and management of a comprehensive HRIS system for Apple Inc., integrating in-house applications with external vendor solutions, with a project value of over $5 million, impacting 150k+ employees.</li>
             <li>Implemented robust encryption protocols to safeguard sensitive employee data, ensuring compliance with industry standards and best practices (e.g., AES, PGP, GDPR).</li>
@@ -82,9 +111,52 @@
             <li>Introduced advanced reporting capabilities by leveraging Performance Analytics and Splunk.</li>
         </ul>
 
-        <!-- Add more professional experience as needed -->
+        <p><strong>Technical Lead Engineer, Infosys Limited</strong> <em>(Jan 2017 - Feb 2020, Sunnyvale, CA)</em></p>
+        <ul>
+            <li>Troubleshot system-level problems, identified root causes, and proposed solutions.</li>
+            <li>Implemented auto-alerts using logging mechanisms to trace critical events and troubleshoot issues proactively.</li>
+            <li>Optimized existing systems by analyzing performance metrics and identifying areas for improvement.</li>
+            <li>Generated comprehensive documentation of processes and procedures related to technical operations.</li>
+            <li>Led a dedicated team of Insite and Offshore to resolve technical issues from ServiceNow Incidents and Radar reports for Apple with 1000+ incidents.</li>
+            <li>Wrote reusable, testable, and efficient code for web services and infrastructure.</li>
+            <li>Actively participated in daily standup meetings with engineering and product managers to discuss progress on tasks assigned and provide inputs on design and solution of the problems.</li>
+            <li>Conduct monthly meetings with app owners to present project status, discuss progress, and brainstorm ideas to enhance application stability.</li>
+        </ul>
 
-        <h3>Skills</h3>
+        <p><strong>Technology Analyst, Infosys Limited</strong> <em>(Oct 2014 - Dec 2016, Mangalore, Karnataka, INDIA)</em></p>
+        <ul>
+            <li>Maintained existing software systems by identifying errors and bugs in codebase.</li>
+            <li>Identified areas of improvement in existing software architecture designs.</li>
+            <li>Collaborated with cross-functional teams on the design of new features or services.</li>
+            <li>Debugged JVM related issues, OM Killer/Analyzed Heap Dump to identify the Memory Leak.</li>
+        </ul>
+
+        <p><strong>Senior System Engineer, Infosys Limited</strong> <em>(Jun 2013 - Sep 2014, Mangalore, Karnataka, INDIA)</em></p>
+        <ul>
+            <li>Implemented message-driven architecture using Apache Camel and ActiveMQ, facilitating seamless communication between distributed systems and ensuring reliable message delivery.</li>
+            <li>Innovated by devising and deploying automated scripting solutions, effectively streamlining and automating repetitive tasks, significantly enhancing operational efficiency and reducing manual workload.</li>
+            <li>Delivered second-line technical support for enterprise software products, ensuring rapid and effective issue resolution.</li>
+            <li>Developed experience with the Java/JVM ecosystem, enhancing support capabilities and technical expertise.</li>
+        </ul>
+
+        <p><strong>Software Engineer, Posidex Technologies</strong> <em>(Jan 2012 - Jun 2013, Mumbai, Maharashtra, INDIA)</em></p>
+        <ul>
+            <li>Conducted daily stand-up calls at client location, facilitating requirement gathering and discussion of ongoing issues and new requirements.</li>
+            <li>Utilized Oracle SQL for database operations, including querying, data manipulation, and performance optimization.</li>
+        </ul>
+
+        <p><strong>Software Trainer, NIIT Ltd</strong> <em>(Dec 2010 - Jan 2012, Mumbai, Maharashtra, INDIA)</em></p>
+        <ul>
+            <li>As a Software Trainer, I spearheaded transformative training initiatives specializing in Java, Oracle, EJB, SQL, PL/SQL, and D2K.</li>
+            <li>Led comprehensive classroom-based training sessions, empowering trainees with practical skills and hands-on expertise.</li>
+            <li>Collaborated with development and business teams to understand business needs, resulting in tailored training programs that addressed specific organizational goals.</li>
+        </ul>
+
+        <p class="section-title">Education and Training</p>
+        <p><strong>Bachelors in Electronics</strong></p>
+        <p>Electronics, Nagpur University, Chandrapur, May 2010</p>
+
+        <p class="section-title">Skills</p>
         <ul>
             <li>Software Development Lifecycle</li>
             <li>Java, Reactjs, SQL, Shell Scripting, CSS, HTML</li>
@@ -113,10 +185,6 @@
             <li>Cross-functional Team Coordination</li>
             <li>Linux/Unix</li>
         </ul>
-
-        <h3>Education and Training</h3>
-        <p><strong>Bachelors</strong></p>
-        <p>Electronics, Nagpur University, Chandrapur, May 2010</p>
     </div>
 
     <div id="projects" class="projects">
